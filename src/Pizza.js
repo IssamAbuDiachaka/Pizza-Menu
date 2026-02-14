@@ -5,37 +5,37 @@ const pizzaData = [
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
-    photoName: "/Pizzas/Pizza1.avif",
+    photo: "/Pizzas/Pizza1.avif",
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozzarella",
     price: 10,
-    photoName: "/Pizzas/pizza2.jpg",
+    photo: "/Pizzas/pizza2.jpg",
   },
   {
     name: "Pizza Spinaci",
     ingredients: "Tomato, mozzarella, spinach, and ricotta cheese",
     price: 12,
-    photoName: "/Pizzas/pizza3.jpg",
+    photo: "/Pizzas/pizza3.jpg",
   },
   {
     name: "Pizza Funghi",
     ingredients: "Tomato, mozzarella, mushrooms, and onion",
     price: 12,
-    photoName: "/Pizzas/pizza4.jpg",
+    photo: "/Pizzas/pizza4.jpg",
   },
   {
     name: "Pizza Salamino",
     ingredients: "Tomato, mozzarella, and pepperoni",
     price: 15,
-    photoName: "/Pizzas/pizza2.jpg",
+    photo: "/Pizzas/pizza2.jpg",
   },
   {
     name: "Pizza Prosciutto",
     ingredients: "Tomato, mozzarella, ham, aragula, and burrata cheese",
     price: 18,
-    photoName: "/Pizzas/pizza3.jpg",
+    photo: "/Pizzas/pizza3.jpg",
   },
 ];
 
@@ -57,39 +57,36 @@ function Header() {
   );
 }
 
-function Pizza({ pizza }) {
-  return (
-    <div className="pizza-card">
-      <div className="pizza-image-container">
-        <img src={pizza.photoName} alt={pizza.name} />
-      </div>
-      <div className="pizza-info">
-        <div className="pizza-header">
-          <h3>{pizza.name}</h3>
-          <span className="pizza-price">
-            €{pizza.price.toFixed(2)}
-          </span>
-        </div>
-        <p className="pizza-description">{pizza.ingredients}</p>
-        <button className="add-to-cart-btn">
-          ADD TO CART
-        </button>
-      </div>
-    </div>
-  );
-}
-
 function Menu() {
   return (
     <div className="menu">
       <h2>Our Menu</h2>
       <p className="menu-description">
-        Delicious pizzas made with fresh ingredients and baked to perfection, Life is a Pizza.
+        Delicious pizzas made with fresh ingredients and baked to perfection,
+        Life is a Pizza.
       </p>
       <div className="pizza-grid">
         {pizzaData.map((pizza) => (
           <Pizza key={pizza.name} pizza={pizza} />
         ))}
+      </div>
+    </div>
+  );
+}
+
+function Pizza({ pizza }) {
+  return (
+    <div className="pizza-card">
+      <div className="pizza-image-container">
+        <img src={pizza.photo} alt={pizza.name} />
+      </div>
+      <div className="pizza-info">
+        <div className="pizza-header">
+          <h3>{pizza.name}</h3>
+          <span className="pizza-price">€{pizza.price.toFixed(2)}</span>
+        </div>
+        <p className="pizza-description">{pizza.ingredients}</p>
+        <button className="add-to-cart-btn">ADD TO CART</button>
       </div>
     </div>
   );
