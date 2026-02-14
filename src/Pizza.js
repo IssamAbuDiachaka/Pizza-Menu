@@ -30,7 +30,6 @@ const pizzaData = [
     ingredients: "Tomato, mozzarella, and pepperoni",
     price: 15,
     photoName: "/Pizzas/pizza2.jpg",
-    spicy: true,
   },
   {
     name: "Pizza Prosciutto",
@@ -53,7 +52,7 @@ function PizzaApp() {
 function Header() {
   return (
     <header className="header">
-      <h1>Fast React Pizza Co.</h1>
+      <h1>Fast Pizza Eatry</h1>
     </header>
   );
 }
@@ -63,7 +62,6 @@ function Pizza({ pizza }) {
     <div className="pizza-card">
       <div className="pizza-image-container">
         <img src={pizza.photoName} alt={pizza.name} />
-        {pizza.spicy && <div className="spicy-badge">SPICY</div>}
       </div>
       <div className="pizza-info">
         <div className="pizza-header">
@@ -84,9 +82,9 @@ function Pizza({ pizza }) {
 function Menu() {
   return (
     <div className="menu">
-      <h2>Our Signature Menu</h2>
+      <h2>Our Menu</h2>
       <p className="menu-description">
-        Authentic recipes, sourdough crust, and local ingredients. Each pizza is crafted with love and baked at 450°C.
+        Delicious pizzas made with fresh ingredients and baked to perfection, Life is a Pizza.
       </p>
       <div className="pizza-grid">
         {pizzaData.map((pizza) => (
@@ -98,15 +96,9 @@ function Menu() {
 }
 
 function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 10;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour < closeHour;
-
   return (
     <footer className="footer">
-      <h2>{isOpen ? "We're currently open!" : "Sorry, we're closed"}</h2>
-      <p>{new Date().toLocaleTimeString()} - {isOpen ? `Visit us until ${closeHour}:00` : `Come back at ${openHour}:00`}</p>
+      <h2>We're currently open!, order your Pizzas</h2>
     </footer>
   );
 }
