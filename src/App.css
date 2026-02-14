@@ -19,10 +19,9 @@
 
 .header h1 {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: #0d1013;
   font-weight: 700;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .menu {
@@ -31,8 +30,8 @@
 }
 
 .menu h2 {
-  font-size: 2rem;
-  color: #2c3e50;
+  font-size: 1.5rem;
+  color: #212325;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -41,19 +40,9 @@
   display: inline-block;
 }
 
-.menu h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: #ff8c42;
-}
 
 .menu-description {
-  color: #7f8c8d;
+  color: #292e2e;
   font-size: 0.95rem;
   margin-bottom: 40px;
   max-width: 600px;
@@ -82,10 +71,6 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.pizza-card.sold-out {
-  opacity: 0.6;
-}
-
 .pizza-image-container {
   width: 100%;
   height: 180px;
@@ -98,32 +83,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.sold-out-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.spicy-badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #e74c3c;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .pizza-info {
@@ -147,10 +106,6 @@
   font-size: 1.1rem;
   color: #ff8c42;
   font-weight: 700;
-}
-
-.pizza-price.sold-out-price {
-  color: #95a5a6;
 }
 
 .pizza-description {
@@ -178,16 +133,6 @@
 
 .add-to-cart-btn:hover {
   background-color: #e67a32;
-}
-
-.add-to-cart-btn.unavailable {
-  background-color: #e0e0e0;
-  color: #95a5a6;
-  cursor: not-allowed;
-}
-
-.add-to-cart-btn.unavailable:hover {
-  background-color: #e0e0e0;
 }
 
 .footer {
